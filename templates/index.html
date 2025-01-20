@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATRIX CALCULATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo Section -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{% static 'images/matrix_operation.jpg' %}" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+                <span class="ml-2 h4 mb-0">Matrix Operation</span>
+            </a>
+    
+            <!-- Optional Toggler for Mobile View -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container mt-5"></div>
+        <h1 class="text-center">Welcome to Matrix Operations</h1>
+        <!-- Additional content here -->
+    </div>
+    <div>
+        <div class="container mt-5">
+            <h1 class="text-center">Matrix Operation</h1>
+            
+            <!-- MATRIX A -->
+            <h2 class="mt-4">Matrix A</h2>
+            <form action="" method="post" class="form-group">
+                {% csrf_token %}
+                <div class="row">
+                    <!-- First Row -->
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a1" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a2" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a3" placeholder="Enter value">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Second Row -->
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a4" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a5" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a6" placeholder="Enter value">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Third Row -->
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a7" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a8" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="a9" placeholder="Enter value">
+                    </div>
+                </div>
+        
+                <!-- MATRIX B -->
+                <h2 class="mt-4">Matrix B</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b1" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b2" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b3" placeholder="Enter value">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b4" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b5" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b6" placeholder="Enter value">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b7" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b8" placeholder="Enter value">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-2" name="b9" placeholder="Enter value">
+                    </div>
+                </div>
+        
+                <!-- Multiply by a number -->
+                <div class="mt-4">
+                    <h4>Enter a value to be multiplied:</h4>
+                    <input type="text" class="form-control" name="mulnum" placeholder="Enter value">
+                </div>
+        
+                <!-- Operation Selection -->
+                <div class="mt-4">
+                    <h3>Select any operation:</h3>
+                    <select class="form-control" name="operation">
+                        <option value="add">ADDITION</option>
+                        <option value="sub">SUBTRACTION</option>
+                        <option value="mul">MULTIPLICATION</option>
+                        <option value="div">DIVISION</option>
+                        <option value="transa">A TRANSPOSE</option>
+                        <option value="transb">B TRANSPOSE</option>
+                        <option value="mula">A MULTIPLIED WITH</option>
+                        <option value="mulb">B MULTIPLIED WITH</option>
+                    </select>
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="mt-4 text-center">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Submit">
+                </div>
+            </form>
+        </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row"></div>
+                
+                <h5>Follow Us</h5>
+                <div class="d-flex justify-content-center">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/charan-edamalapati-6994a8319/" class="text-white mx-2" target="_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/Charannaidu07" class="text-white mx-2" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/charan_naidu_2005/?next=%2F" class="text-white mx-2" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted">&copy; 2024 Matrix Operation. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="#" class="text-white mr-2">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
